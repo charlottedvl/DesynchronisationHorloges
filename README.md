@@ -8,6 +8,7 @@ expériences de **Hafele et Keating** et de **Carroll Alley**.
 Nous avons décidé de représenter nos résultats sous trois formes: comparés à ceux d'Hafele-Keating en fonction de la 
 vitesse de l'avion, comparés à ceux d'Hafele-Keating en fonction de l'altitude de l'avion et comparé à ceux de Carroll Alley. 
 Il est possible de choisir quelle représentation on souhaite afficher : 
+
 ![Fenetre graphique](docu/img2.png)
 
 ## Définitions des constantes 
@@ -24,7 +25,9 @@ g = G * M / (R + altitude) ** 2 # accélération de la pesanteur en m/s²
  ```
 Cette fonction retourne le décalage temporel, multiplié par le temps de vol. 
 Décalage temporel calculé par la formule suivante :
+
 ![calcul](docu/calcul.png)
+
 représentée dans le code par la variable delta_t :
 ```python
 delta_t = ((g*altitude) - (vitesseTerre*vitesse*np.cos(latitude*2*np.pi/360)) - (vitesse**2)/2) / (c**2)
@@ -64,11 +67,15 @@ HK_est_prediction = -40
 HK_ouest_prediction = 275
 ```
 Nous obtenons pour cette simulation le graphique suivant, en comparant avec les prédictions réelles de l'expérience :
+
 ![Résultats Hafele Keating](docu/HFresult.png)
+
 On observe que nous sommes très proches des prédictions réelles et des résultats réels car les points les représentants
 sont pratiquement sur la courbe tracée. 
 Nous avons décidé de représenter aussi les résultats en fonction de l'altitude et les résultats obtenus sont les suivants:
+
 ![HF Résultats ALti](docu/img_1.png)
+
 ## Carroll Alley 
 Nous rappelons les conditions de vol de Carroll Alley : 
 ```python
@@ -78,5 +85,7 @@ vitesse_alley = 500/3.6 # en m/s
 latitude_alley = 37 # en degre, qui correspond à Chesapeake Bay dans le Maryland, lieu de l'expérience
 ```
 Nous obtenons pour ces valeurs les résultats suivants : 
+
 ![Carroll Alley Résultats](docu/img.png)
+
 Nous sommes encore une fois proches des résultats attendus car la valeur se trouve sur la courbe. 
